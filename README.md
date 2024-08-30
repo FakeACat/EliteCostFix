@@ -10,4 +10,4 @@ This mod attempts to fix the issue by:
 -Setting the new tier's cost multiplier to the same as the normal tier 1's cost multiplier
 -Disabling the normal tier 1 once the new tier is available (not sure if this is actually needed)
 
-This achieves what I believe was the intended behaviour - introducing gilded elites to the tier 1 elite pool starting at stage 3.
+This achieves what I believe was the intended behaviour - introducing gilded elites to the tier 1 elite pool starting at stage 3. There may be a better way to do this but considering how much harder this issue makes the game, I wanted to get this out fairly quick.
