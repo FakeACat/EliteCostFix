@@ -12,4 +12,4 @@ This mod attempts to fix the issue by:
 
 This achieves what I believe was the intended behaviour - introducing gilded elites to the tier 1 elite pool starting at stage 3. There may be a better way to do this but considering how much harder this issue makes the game, I wanted to get this out fairly quick.
 
-Message me (a cats) on discord if this mod has any problems :)
+Message me (acats) on discord if this mod has any problems :)
