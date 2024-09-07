@@ -10,15 +10,15 @@ namespace EliteCostFix
         public const string PluginGUID = PluginAuthor + "." + PluginName;
         public const string PluginAuthor = "acats";
         public const string PluginName = "EliteCostFix";
-        public const string PluginVersion = "1.0.0";
+        public const string PluginVersion = "1.0.1";
 
         public void Awake()
         {
             Log.Init(Logger);
 
-            On.RoR2.CombatDirector.Init += orig =>
+            /*On.RoR2.CombatDirector.Init += orig =>*/
+            RoR2Application.onLoad += () =>
             {
-                orig();
                 CombatDirector.EliteTierDef normalTier1 = null;
                 CombatDirector.EliteTierDef tier1WithGold = null;
 
@@ -64,6 +64,25 @@ namespace EliteCostFix
                 normalTier1.isAvailable = rules =>
                     vanillaIsAvailable(rules) && !tier1WithGold.isAvailable(rules);
             };
+
+            /*On.RoR2.CombatDirector.AttemptSpawnOnTarget += (*/
+            /*    orig,*/
+            /*    self,*/
+            /*    spawnTarget,*/
+            /*    placementMode*/
+            /*) =>*/
+            /*{*/
+            /*    float creditsBefore = self.monsterCredit;*/
+            /*    var a = orig(self, spawnTarget, placementMode);*/
+            /*    float creditsAfter = self.monsterCredit;*/
+            /*    Log.Info(*/
+            /*        "Spent "*/
+            /*            + (creditsBefore - creditsAfter)*/
+            /*            + " credits on "*/
+            /*            + self.currentMonsterCard.spawnCard.name*/
+            /*    );*/
+            /*    return a;*/
+            /*};*/
         }
     }
 }
